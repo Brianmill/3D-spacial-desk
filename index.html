@@ -36,11 +36,13 @@
 
     /* MAIN — slightly forward, minimal tilt */
 .main {
-  width: 800px;
-  height: 450px;
-  top: 140px;
-  left: 250px;
-  transform: translateZ(150px);
+  width: 1250px;
+  height: 500px;
+  top: 0px;
+  left: 50%;
+  right: 0px;
+  transform: translateX(-50%) translateZ(150px);
+  position: absolute;
 }
 
 /* LEFT — hinge from right edge */
@@ -65,12 +67,14 @@
 
 /* BOTTOM — hinge from top */
 .bottom {
-  width: 800px;
-  height: 500px;
-  bottom: -260px;
-  left: 250px;
+  width: 1250px;
+  height: 700px;
+  bottom: -250px;
+  right: 50%;
   transform-origin: top center;
+  position: absolute;
   transform: rotateX(65deg) translateZ(-30px);
+  transform: translateX(50%) rotateX(65deg) translateZ(-30px);
 }
 
   </style>
