@@ -25,8 +25,6 @@
     .panel {
       position: absolute;
       border: 3px solid #1c1c1c;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.8);
-      background: black;
     }
 
     webview {
@@ -36,12 +34,12 @@
 
     /* MAIN — slightly forward, minimal tilt */
 .main {
-  width: 1250px;
+  width: 1290px;
   height: 500px;
-  top: 0px;
+  top: -35px;
   left: 50%;
   right: 0px;
-  transform: translateX(-50%) translateZ(150px);
+  transform: translateX(-50%) translateZ(0px);
   position: absolute;
 }
 
@@ -67,9 +65,9 @@
 
 /* BOTTOM — hinge from top */
 .bottom {
-  width: 1250px;
+  width: 1300px;
   height: 700px;
-  bottom: -250px;
+  bottom: -300px;
   right: 50%;
   transform-origin: top center;
   position: absolute;
@@ -83,7 +81,6 @@
 <body>
 
   <div class="workspace">
-
     <div class="panel main">
       <webview src="https://www.google.com"></webview>
     </div>
