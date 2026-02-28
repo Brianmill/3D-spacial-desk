@@ -43,24 +43,28 @@
   position: absolute;
 }
 
-/* LEFT — hinge from right edge */
+/* LEFT — hinge from right edge, tapered to fit in 3D space */
 .left {
+  /* base size is large enough for content but will be clipped */
   width: 650px;
-  height: 450px;
-  top: 140px;
-  left: -180px;
+  height: 800px;
+  left: -600px;
+
   transform-origin: right center;
-  transform: rotateY(65deg) translateZ(-50px);
+  /* rotate out of the workspace and push slightly back for perspective */
+  transform: rotateY(90deg) translateZ(-50px);
+
+  /* clip the panel into a trapezoid so the top edge is narrower */
+  clip-path: polygon(100% 0%, 0% 10%, 0% 90%, 100% 100%);
 }
 
 /* RIGHT — mirror of left */
 .right {
   width: 650px;
-  height: 450px;
-  top: 140px;
-  right: -180px;
+  height: 800px;
+  right: -600px;
   transform-origin: left center;
-  transform: rotateY(-65deg) translateZ(-50px);
+  transform: rotateY(-90deg) translateZ(-50px);
 }
 
 /* BOTTOM — hinge from top */
@@ -84,7 +88,7 @@
     <div class="panel main">
       <webview src="https://www.google.com"></webview>
     </div>
-<!--
+
     <div class="panel left">
       <webview src="https://www.github.com"></webview>
     </div>
@@ -92,7 +96,7 @@
     <div class="panel right">
       <webview src="https://www.youtube.com"></webview>
     </div>
--->
+
     <div class="panel bottom">
       <webview src="https://chat.openai.com"></webview>
     </div>
