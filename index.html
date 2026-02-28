@@ -34,44 +34,43 @@
       height: 100%;
     }
 
-    /* MAIN SCREEN */
+    /* MAIN — slightly forward, minimal tilt */
 .main {
   width: 800px;
   height: 450px;
-  top: 120px;
+  top: 140px;
   left: 250px;
-  transform: translateZ(-300px) rotateX(5deg);
-  transform-origin: center center;
+  transform: translateZ(150px);
 }
 
-/* LEFT SCREEN */
+/* LEFT — hinge from right edge */
 .left {
   width: 650px;
   height: 450px;
-  top: 150px;
-  left: -220px;
-  transform: rotateY(70deg) translateZ(-120px);
+  top: 140px;
+  left: -180px;
   transform-origin: right center;
+  transform: rotateY(65deg) translateZ(-50px);
 }
 
-/* RIGHT SCREEN */
+/* RIGHT — mirror of left */
 .right {
   width: 650px;
   height: 450px;
-  top: 150px;
-  right: -220px;
-  transform: rotateY(-70deg) translateZ(-120px);
+  top: 140px;
+  right: -180px;
   transform-origin: left center;
+  transform: rotateY(-65deg) translateZ(-50px);
 }
 
-/* BOTTOM SCREEN */
+/* BOTTOM — hinge from top */
 .bottom {
   width: 800px;
   height: 500px;
-  bottom: -320px;
+  bottom: -260px;
   left: 250px;
-  transform: rotateX(70deg) translateZ(120px);
   transform-origin: top center;
+  transform: rotateX(65deg) translateZ(-30px);
 }
 
   </style>
